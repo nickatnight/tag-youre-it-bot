@@ -1,9 +1,8 @@
 
 import * as React from 'react';
 import PeopleIcon from '@mui/icons-material/People';
-import { useTranslate } from 'react-admin';
 
-import CardWithIcon from './CardWithIcon';
+import CardWithIcon from '../../components/CardWithIcon';
 
 interface Props {
     value?: string;
@@ -11,12 +10,12 @@ interface Props {
 
 const TotalPayers = (props: Props) => {
     const { value } = props;
-    const translate = useTranslate();
+
     return (
         <CardWithIcon
             to="/commands"
             icon={PeopleIcon}
-            title={translate('Total Players')}
+            title='Total Players'
             subtitle={value}
         />
     );

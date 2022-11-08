@@ -4,8 +4,8 @@ import { Card, Box, Typography, Divider } from '@mui/material';
 import { Link, To } from 'react-router-dom';
 import { ReactNode } from 'react';
 
-import cartouche from '../../assets/img/cartouche.png';
-import cartoucheDark from '../../assets/img/cartoucheDark.png';
+import cartouche from '../assets/img/cartouche.png';
+import cartoucheDark from '../assets/img/cartoucheDark.png';
 
 interface Props {
     icon: FC<any>;
