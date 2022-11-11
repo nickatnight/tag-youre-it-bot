@@ -1,4 +1,5 @@
 import React, { useMemo, CSSProperties } from 'react';
+import { useMediaQuery, Theme } from '@mui/material';
 
 import TotalPlayers from './TotalPlayers';
 import Welcome from './Welcome';
@@ -13,11 +14,44 @@ const styles = {
 };
 
 const Spacer = () => <span style={{ width: '1em' }} />;
-// const VerticalSpacer = () => <span style={{ height: '1em' }} />;
+const VerticalSpacer = () => <span style={{ height: '1em' }} />;
 
 const Dashboard = () => {
-
-    return (
+    const isXSmall = useMediaQuery((theme: Theme) =>
+        theme.breakpoints.down('sm')
+    );
+    const isSmall = useMediaQuery((theme: Theme) =>
+        theme.breakpoints.down('lg')
+    );
+    return isXSmall ? (
+        <div>
+            <div style={styles.flexColumn as CSSProperties}>
+                <Welcome />
+                {/* <MonthlyRevenue value={revenue} /> */}
+                <VerticalSpacer />
+                <TotalPlayers value="43" />
+                <VerticalSpacer />
+                {/* <PendingOrders orders={pendingOrders} /> */}
+            </div>
+        </div>
+    ) : isSmall ? (
+        <div style={styles.flexColumn as CSSProperties}>
+            <div style={styles.singleCol}>
+                <Welcome />
+            </div>
+            <div style={styles.flex}>
+                <TotalPlayers value="43" />
+                <Spacer />
+                {/* <NbNewOrders value={nbNewOrders} /> */}
+            </div>
+            <div style={styles.singleCol}>
+                {/* <OrderChart orders={recentOrders} /> */}
+            </div>
+            <div style={styles.singleCol}>
+                {/* <PendingOrders orders={pendingOrders} /> */}
+            </div>
+        </div>
+    ) : (
         <>
             <Welcome />
             <div style={styles.flex}>
