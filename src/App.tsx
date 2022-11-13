@@ -1,15 +1,19 @@
 import * as React from "react";
-import { Admin, Resource, ListGuesser, CustomRoutes } from 'react-admin';
+import { Admin, Resource, CustomRoutes } from 'react-admin';
 import { Route } from 'react-router';
-import UserIcon from '@mui/icons-material/People';
-import jsonServerProvider from 'ra-data-json-server';
 
 import { Dashboard } from './pages/dashboard';
 import { Layout } from './layout';
-import { darkTheme } from './layout/themes';
+import { lightTheme } from './layout/themes';
 import Configuration from './pages/configuration/Configuration';
+import restProvider from "./dataProviders/restProvider";
 
-const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+import players from './pages/players';
+import { getApiUrl } from './utils'
+
+
+const API_URL = getApiUrl()
+const dataProvider = restProvider(API_URL);
 
 const App = () => (
   <Admin
@@ -17,12 +21,12 @@ const App = () => (
     dashboard={Dashboard}
     layout={Layout}
     disableTelemetry
-    theme={darkTheme}
+    theme={lightTheme}
   >
     <CustomRoutes>
         <Route path="/configuration" element={<Configuration />} />
     </CustomRoutes>
-    <Resource name="users" list={ListGuesser} icon={UserIcon} />
+    <Resource name="players" {...players} />
   </Admin>
 );
 
