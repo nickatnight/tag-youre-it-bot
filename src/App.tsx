@@ -9,6 +9,7 @@ import Configuration from './pages/configuration/Configuration';
 import restProvider from "./dataProviders/restProvider";
 
 import players from './pages/players';
+import subreddits from './pages/subreddits';
 import { getApiUrl } from './utils'
 
 
@@ -27,6 +28,7 @@ const App = () => (
         <Route path="/configuration" element={<Configuration />} />
     </CustomRoutes>
     <Resource name="players" {...players} />
+    <Resource name="subreddits" {...subreddits} />
   </Admin>
 );
 
