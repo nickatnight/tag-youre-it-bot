@@ -1,29 +1,40 @@
 import * as React from "react";
-import { Admin, Resource, ListGuesser, CustomRoutes } from 'react-admin';
+import { Admin, Resource, CustomRoutes } from 'react-admin';
 import { Route } from 'react-router';
-import UserIcon from '@mui/icons-material/People';
-import jsonServerProvider from 'ra-data-json-server';
 
 import { Dashboard } from './pages/dashboard';
 import { Layout } from './layout';
-import { darkTheme } from './layout/themes';
+import { lightTheme } from './layout/themes';
 import Configuration from './pages/configuration/Configuration';
+import restProvider from "./dataProviders/restProvider";
+import Maintenance from "./components/Maintenance";
+import players from './pages/players';
+import { getApiUrl } from './utils'
 
-const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+
+const API_URL = getApiUrl()
+const dataProvider = restProvider(API_URL);
+const maintenance = false;
 
 const App = () => (
-  <Admin
-    dataProvider={dataProvider}
-    dashboard={Dashboard}
-    layout={Layout}
-    disableTelemetry
-    theme={darkTheme}
-  >
-    <CustomRoutes>
-        <Route path="/configuration" element={<Configuration />} />
-    </CustomRoutes>
-    <Resource name="users" list={ListGuesser} icon={UserIcon} />
-  </Admin>
+  <>
+    { maintenance ? (
+      <Maintenance />
+    ) : (
+      <Admin
+        dataProvider={dataProvider}
+        dashboard={Dashboard}
+        layout={Layout}
+        disableTelemetry
+        theme={lightTheme}
+      >
+        <CustomRoutes>
+            <Route path="/configuration" element={<Configuration />} />
+        </CustomRoutes>
+        <Resource name="players" {...players} />
+      </Admin>
+    )}
+  </>
 );
 
 export default App;

@@ -42,13 +42,15 @@ const Welcome = () => {
                         }}
                     >
                         <Button
+                            target="_blank"
                             variant="contained"
-                            href="https://api.tagyoureitbot.com/docs"
+                            href="https://api-staging.tagyoureitbot.com/docs"
                             startIcon={<HomeIcon />}
                         >
                             TagYoureItBot Api
                         </Button>
                         <Button
+                            target="_blank"
                             variant="contained"
                             href="https://github.com/nickatnight/tag-youre-it-bot"
                             startIcon={<CodeIcon />}

@@ -1,6 +1,6 @@
 # TagYoureItBot Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is largely based off [react-admin](https://github.com/marmelab/react-admin) demo dashboard.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is largely based off [react-admin](https://github.com/marmelab/react-admin/tree/master/examples/demo) demo dashboard.
 
 ## Available Scripts
 
