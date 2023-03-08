@@ -27,8 +27,8 @@ const SubredditList = () => {
     const getResourceLabel = useGetResourceLabel();
     const isSmall = useMediaQuery<Theme>(theme => theme.breakpoints.down('md'));
     return (
-        <ListBase perPage={24} sort={{ field: 'display_name', order: 'asc' }}>
-            <Title defaultTitle={getResourceLabel('products', 2)} />
+        <ListBase perPage={10} sort={{ field: 'display_name', order: 'asc' }}>
+            <Title defaultTitle={getResourceLabel('subreddits', 2)} />
             <FilterContext.Provider value={productFilters}>
                 <ListActions isSmall={isSmall} />
                 {isSmall && (
