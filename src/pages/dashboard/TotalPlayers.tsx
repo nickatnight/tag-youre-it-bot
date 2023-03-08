@@ -13,7 +13,7 @@ const TotalPayers = (props: Props) => {
 
     return (
         <CardWithIcon
-            to="/commands"
+            to="/players"
             icon={PeopleIcon}
             title='Total Players'
             subtitle={value}

@@ -14,7 +14,7 @@ import { getApiUrl } from './utils'
 
 const API_URL = getApiUrl()
 const dataProvider = restProvider(API_URL);
-const maintenance = true;
+const maintenance = false;
 
 const App = () => (
   <>

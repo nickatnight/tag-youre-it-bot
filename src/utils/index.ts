@@ -1,18 +1,10 @@
 
 export const getApiUrl = (): string => {
-    let BASE_URL = '';
+    let BASE_URL = 'http://localhost:8666/v1';
 
     switch(process.env.NODE_ENV) {
         case 'production':
-            BASE_URL = 'https://api.tagyoureitbot.com/v2';
-            break
-
-        case 'development':
-            BASE_URL = 'http://localhost:8000/v2';
-            break
-
-        case 'test':
-            BASE_URL = 'http://localhost:8000/v2';
+            BASE_URL = 'https://api-staging.tagyoureitbot.com/v1';
             break
     }
 
