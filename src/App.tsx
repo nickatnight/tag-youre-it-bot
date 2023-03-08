@@ -7,7 +7,7 @@ import { Layout } from './layout';
 import { lightTheme } from './layout/themes';
 import Configuration from './pages/configuration/Configuration';
 import restProvider from "./dataProviders/restProvider";
-
+import Maintenance from "./components/Maintenance";
 import players from './pages/players';
 import subreddits from './pages/subreddits';
 import { getApiUrl } from './utils'
@@ -15,21 +15,28 @@ import { getApiUrl } from './utils'
 
 const API_URL = getApiUrl()
 const dataProvider = restProvider(API_URL);
+const maintenance = false;
 
 const App = () => (
-  <Admin
-    dataProvider={dataProvider}
-    dashboard={Dashboard}
-    layout={Layout}
-    disableTelemetry
-    theme={lightTheme}
-  >
-    <CustomRoutes>
-        <Route path="/configuration" element={<Configuration />} />
-    </CustomRoutes>
-    <Resource name="players" {...players} />
-    <Resource name="subreddits" {...subreddits} />
-  </Admin>
+  <>
+    { maintenance ? (
+      <Maintenance />
+    ) : (
+      <Admin
+        dataProvider={dataProvider}
+        dashboard={Dashboard}
+        layout={Layout}
+        disableTelemetry
+        theme={lightTheme}
+      >
+        <CustomRoutes>
+            <Route path="/configuration" element={<Configuration />} />
+        </CustomRoutes>
+        <Resource name="players" {...players} />
+        <Resource name="subreddits" {...subreddits} />
+      </Admin>
+    )}
+  </>
 );
 
 export default App;
