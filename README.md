@@ -40,7 +40,9 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Development
+
 I am accepting PRs
 
 ## Acknowledgment
+
 - [Twemoji](https://twemoji.twitter.com/) for open source favicons...licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
