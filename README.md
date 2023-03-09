@@ -1,3 +1,13 @@
+<p align="center">
+    <a href="https://github.com/nickatnight/tag-youre-it-bot/actions">
+        <img alt="GitHub Actions status" src="https://github.com/nickatnight/tag-youre-it-bot/actions/workflows/main.yml/badge.svg">
+    </a>
+    <a href="https://github.com/nickatnight/tag-youre-it-bot/releases"><img alt="Release Status" src="https://img.shields.io/github/v/release/nickatnight/tag-youre-it-bot"></a>
+    <!-- <a href="https://github.com/nickatnight/tag-youre-it-bot/blob/master/LICENSE">
+        <img alt="License Shield" src="https://img.shields.io/github/license/nickatnight/tag-youre-it-bot">
+    </a> -->
+</p>
+
 # TagYoureItBot Frontend
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is largely based off [react-admin](https://github.com/marmelab/react-admin/tree/master/examples/demo) demo dashboard.
@@ -28,3 +38,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Development
+I am accepting PRs
+
+## Acknowledgment
+- [Twemoji](https://twemoji.twitter.com/) for open source favicons...licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
