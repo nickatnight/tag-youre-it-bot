@@ -21,7 +21,8 @@ const UsernameField = (props: Props) => {
       flexWrap="nowrap"
       alignItems="center"
       component="div"
-      sx={props.sx}>
+      sx={props.sx}
+    >
       <AvatarField
         record={record}
         size={size}

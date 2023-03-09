@@ -19,14 +19,16 @@ const Configuration = () => {
           variant="contained"
           sx={{ margin: '1em' }}
           color={theme?.palette?.mode === 'light' ? 'primary' : 'secondary'}
-          onClick={() => setTheme(lightTheme)}>
+          onClick={() => setTheme(lightTheme)}
+        >
           Light
         </Button>
         <Button
           variant="contained"
           sx={{ margin: '1em' }}
           color={theme?.palette?.mode === 'dark' ? 'primary' : 'secondary'}
-          onClick={() => setTheme(darkTheme)}>
+          onClick={() => setTheme(darkTheme)}
+        >
           Dark
         </Button>
       </CardContent>

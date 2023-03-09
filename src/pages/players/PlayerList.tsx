@@ -27,7 +27,8 @@ const PlayerList = () => {
         }}
         filters={playerFilters}
         perPage={10}
-        sort={{ field: 'created_utc', order: 'desc' }}>
+        sort={{ field: 'created_at', order: 'desc' }}
+      >
         {isXSmall ? (
           <PlayerListMobile />
         ) : (

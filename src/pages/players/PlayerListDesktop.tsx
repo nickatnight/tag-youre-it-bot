@@ -33,8 +33,9 @@ const PlayerListDesktop = ({ selectedRow }: PlayerListDesktopProps) => (
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap'
       }
-    }}>
-    <DateField source="created_utc" />
+    }}
+  >
+    <DateField source="created_at" />
     <TextField source="username" />
     {/* <UsernameField /> */}
     {/* <CustomerReferenceField link={false} />

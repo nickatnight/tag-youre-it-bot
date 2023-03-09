@@ -30,7 +30,8 @@ const CardWithIcon = (props: Props) => {
           textDecoration: 'none',
           color: 'inherit'
         }
-      }}>
+      }}
+    >
       <Link to={to}>
         <Box
           sx={{
@@ -47,7 +48,8 @@ const CardWithIcon = (props: Props) => {
               color: (theme) =>
                 theme.palette.mode === 'dark' ? 'inherit' : '#dc2440'
             }
-          }}>
+          }}
+        >
           <Box width="3em" className="icon">
             {createElement(icon, { fontSize: 'large' })}
           </Box>

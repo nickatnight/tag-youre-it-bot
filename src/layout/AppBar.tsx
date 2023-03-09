@@ -21,7 +21,8 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
       // @ts-ignore
       ref={ref}
       {...props}
-      to="/configuration">
+      to="/configuration"
+    >
       <ListItemIcon>
         <SettingsIcon />
       </ListItemIcon>
@@ -44,7 +45,8 @@ const CustomAppBar = (props: any) => {
       {...props}
       color="secondary"
       elevation={1}
-      userMenu={<CustomUserMenu />}>
+      userMenu={<CustomUserMenu />}
+    >
       <Typography
         variant="h6"
         color="inherit"

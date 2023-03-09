@@ -57,7 +57,8 @@ const LoadedGridList = () => {
             resource: 'subreddits',
             id: record.id,
             type: 'edit'
-          })}>
+          })}
+        >
           <img src={record.thumbnail} alt="" />
           <ImageListItemBar
             title={record.display_name}

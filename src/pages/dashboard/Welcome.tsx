@@ -18,7 +18,8 @@ const Welcome = () => {
         padding: '20px',
         marginTop: 2,
         marginBottom: '1em'
-      }}>
+      }}
+    >
       <Box display="flex">
         <Box flex="1">
           <Typography variant="h5" component="h2" gutterBottom>
@@ -31,7 +32,8 @@ const Welcome = () => {
               <a
                 href="https://www.reddit.com/r/TagYoureItBot/comments/yi25li/tagyoureitbot_info_v22/"
                 rel="noreferrer"
-                target="_blank">
+                target="_blank"
+              >
                 here
               </a>
               .
@@ -46,19 +48,22 @@ const Welcome = () => {
                 marginLeft: { xs: '0!important', xl: null },
                 marginRight: { xs: '1em', xl: null }
               }
-            }}>
+            }}
+          >
             <Button
               target="_blank"
               variant="contained"
               href="https://api-staging.tagyoureitbot.com/docs"
-              startIcon={<HomeIcon />}>
+              startIcon={<HomeIcon />}
+            >
               TagYoureItBot Api
             </Button>
             <Button
               target="_blank"
               variant="contained"
               href="https://github.com/nickatnight/tag-youre-it-bot"
-              startIcon={<CodeIcon />}>
+              startIcon={<CodeIcon />}
+            >
               Source for this site
             </Button>
           </CardActions>

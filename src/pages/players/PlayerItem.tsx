@@ -27,7 +27,8 @@ export const PlayerItem = () => {
       })}
       component={Link}
       underline="none"
-      color="inherit">
+      color="inherit"
+    >
       <ListItem button>
         <ListItemAvatar>
           <AvatarField size="40" />

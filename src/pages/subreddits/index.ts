@@ -4,6 +4,6 @@ import SubredditList from './SubredditList'
 const subreddits = {
   list: SubredditList,
   icon: ConnectWithoutContactIcon
-};
+}
 
-export default subreddits;
+export default subreddits

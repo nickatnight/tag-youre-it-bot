@@ -26,7 +26,8 @@ const App = () => (
         dashboard={Dashboard}
         layout={Layout}
         disableTelemetry
-        theme={lightTheme}>
+        theme={lightTheme}
+      >
         <CustomRoutes>
           <Route path="/configuration" element={<Configuration />} />
         </CustomRoutes>
