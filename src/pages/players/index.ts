@@ -1,7 +1,9 @@
 import UserIcon from '@mui/icons-material/People';
 import PlayerList from './PlayerList';
 
-export default {
+const players = {
     icon: UserIcon,
     list: PlayerList,
 };
+
+export default players;

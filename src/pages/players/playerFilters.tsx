@@ -1,10 +1,6 @@
 import * as React from 'react';
 import {
-    AutocompleteInput,
-    DateInput,
-    ReferenceInput,
     SearchInput,
-    SelectInput,
     BooleanInput,
 } from 'react-admin';
 
