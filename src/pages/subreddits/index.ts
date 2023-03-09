@@ -1,7 +1,9 @@
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
 import SubredditList from './SubredditList'
 
-export default {
+const subreddits = {
   list: SubredditList,
   icon: ConnectWithoutContactIcon
-}
+};
+
+export default subreddits;
