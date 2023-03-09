@@ -1,4 +1,4 @@
-import AppBar from './AppBar'
-import Layout from './Layout'
+import AppBar from './AppBar';
+import Layout from './Layout';
 
-export { AppBar, Layout }
+export { AppBar, Layout };

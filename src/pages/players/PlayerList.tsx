@@ -1,17 +1,19 @@
-import * as React from 'react'
-import { List } from 'react-admin'
-import { matchPath, useLocation } from 'react-router-dom'
-import { Box, useMediaQuery, Theme } from '@mui/material'
+import * as React from 'react';
+import { List } from 'react-admin';
+import { matchPath, useLocation } from 'react-router-dom';
+import { Box, useMediaQuery, Theme } from '@mui/material';
 
-import PlayerListMobile from './PlayerListMobile'
-import PlayerListDesktop from './PlayerListDesktop'
-import playerFilters from './playerFilters'
-import Empty from '../../components/Empty'
+import PlayerListMobile from './PlayerListMobile';
+import PlayerListDesktop from './PlayerListDesktop';
+import playerFilters from './playerFilters';
+import Empty from '../../components/Empty';
 
 const PlayerList = () => {
-  const isXSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down('sm'))
-  const location = useLocation()
-  const match = matchPath('/players/:id', location.pathname)
+  const isXSmall = useMediaQuery<Theme>((theme) =>
+    theme.breakpoints.down('sm')
+  );
+  const location = useLocation();
+  const match = matchPath('/players/:id', location.pathname);
 
   return (
     <Box display="flex">
@@ -40,7 +42,7 @@ const PlayerList = () => {
         )}
       </List>
     </Box>
-  )
-}
+  );
+};
 
-export default PlayerList
+export default PlayerList;

@@ -1,20 +1,20 @@
-import * as React from 'react'
-import { Admin, Resource, CustomRoutes } from 'react-admin'
-import { Route } from 'react-router'
+import * as React from 'react';
+import { Admin, Resource, CustomRoutes } from 'react-admin';
+import { Route } from 'react-router';
 
-import { Dashboard } from './pages/dashboard'
-import { Layout } from './layout'
-import { lightTheme } from './layout/themes'
-import Configuration from './pages/configuration/Configuration'
-import restProvider from './dataProviders/restProvider'
-import Maintenance from './components/Maintenance'
-import players from './pages/players'
-import subreddits from './pages/subreddits'
-import { getApiUrl } from './utils'
+import { Dashboard } from './pages/dashboard';
+import { Layout } from './layout';
+import { lightTheme } from './layout/themes';
+import Configuration from './pages/configuration/Configuration';
+import restProvider from './dataProviders/restProvider';
+import Maintenance from './components/Maintenance';
+import players from './pages/players';
+import subreddits from './pages/subreddits';
+import { getApiUrl } from './utils';
 
-const API_URL = getApiUrl()
-const dataProvider = restProvider(API_URL)
-const maintenance = false
+const API_URL = getApiUrl();
+const dataProvider = restProvider(API_URL);
+const maintenance = false;
 
 const App = () => (
   <>
@@ -36,6 +36,6 @@ const App = () => (
       </Admin>
     )}
   </>
-)
+);
 
-export default App
+export default App;

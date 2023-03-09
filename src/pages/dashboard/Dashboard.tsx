@@ -1,11 +1,11 @@
-import React, { CSSProperties } from 'react'
-import { useGetList } from 'react-admin'
-import { useMediaQuery, Theme } from '@mui/material'
+import React, { CSSProperties } from 'react';
+import { useGetList } from 'react-admin';
+import { useMediaQuery, Theme } from '@mui/material';
 
-import TotalPlayers from './TotalPlayers'
-import Welcome from './Welcome'
+import TotalPlayers from './TotalPlayers';
+import Welcome from './Welcome';
 
-import { Player } from '../../types'
+import { Player } from '../../types';
 
 const styles = {
   flex: { display: 'flex' },
@@ -13,19 +13,21 @@ const styles = {
   leftCol: { flex: 1, marginRight: '0.5em' },
   rightCol: { flex: 1, marginLeft: '0.5em' },
   singleCol: { marginTop: '1em', marginBottom: '1em' }
-}
+};
 
-const Spacer = () => <span style={{ width: '1em' }} />
-const VerticalSpacer = () => <span style={{ height: '1em' }} />
+const Spacer = () => <span style={{ width: '1em' }} />;
+const VerticalSpacer = () => <span style={{ height: '1em' }} />;
 
 const Dashboard = () => {
-  const isXSmall = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
-  const isSmall = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'))
+  const isXSmall = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down('sm')
+  );
+  const isSmall = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
   const { data: players } = useGetList<Player>('players', {
     // filter: { date_gte: aMonthAgo.toISOString() },
     // sort: { field: 'date', order: 'DESC' },
     pagination: { page: 1, perPage: 50 }
-  })
+  });
   return isXSmall ? (
     <div>
       <div style={styles.flexColumn as CSSProperties}>
@@ -80,7 +82,7 @@ const Dashboard = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

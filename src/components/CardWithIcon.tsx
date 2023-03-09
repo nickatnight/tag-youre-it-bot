@@ -1,22 +1,22 @@
-import * as React from 'react'
-import { FC, createElement } from 'react'
-import { Card, Box, Typography, Divider } from '@mui/material'
-import { Link, To } from 'react-router-dom'
-import { ReactNode } from 'react'
+import * as React from 'react';
+import { FC, createElement } from 'react';
+import { Card, Box, Typography, Divider } from '@mui/material';
+import { Link, To } from 'react-router-dom';
+import { ReactNode } from 'react';
 
-import cartouche from '../assets/img/cartouche.png'
-import cartoucheDark from '../assets/img/cartoucheDark.png'
+import cartouche from '../assets/img/cartouche.png';
+import cartoucheDark from '../assets/img/cartoucheDark.png';
 
 interface Props {
-  icon: FC<any>
-  to: To
-  title?: string
-  subtitle?: string | number
-  children?: ReactNode
+  icon: FC<any>;
+  to: To;
+  title?: string;
+  subtitle?: string | number;
+  children?: ReactNode;
 }
 
 const CardWithIcon = (props: Props) => {
-  const { icon, title, subtitle, to, children } = props
+  const { icon, title, subtitle, to, children } = props;
 
   return (
     // @ts-ignore
@@ -64,7 +64,7 @@ const CardWithIcon = (props: Props) => {
       {children && <Divider />}
       {children}
     </Card>
-  )
-}
+  );
+};
 
-export default CardWithIcon
+export default CardWithIcon;

@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Box, Chip, useMediaQuery, Theme } from '@mui/material'
+import * as React from 'react';
+import { Box, Chip, useMediaQuery, Theme } from '@mui/material';
 import {
   CreateButton,
   ExportButton,
@@ -16,14 +16,14 @@ import {
   TopToolbar,
   useTranslate,
   useGetResourceLabel
-} from 'react-admin'
+} from 'react-admin';
 
-import ImageList from './GridList'
+import ImageList from './GridList';
 // import Aside from './Aside';
 
 const SubredditList = () => {
-  const getResourceLabel = useGetResourceLabel()
-  const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'))
+  const getResourceLabel = useGetResourceLabel();
+  const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
   return (
     <ListBase perPage={10} sort={{ field: 'display_name', order: 'asc' }}>
       <Title defaultTitle={getResourceLabel('subreddits', 2)} />
@@ -43,13 +43,13 @@ const SubredditList = () => {
         </Box>
       </Box>
     </ListBase>
-  )
-}
+  );
+};
 
 const QuickFilter = ({ label }: InputProps) => {
-  const translate = useTranslate()
-  return <Chip sx={{ mb: 1 }} label={translate(label as string)} />
-}
+  const translate = useTranslate();
+  return <Chip sx={{ mb: 1 }} label={translate(label as string)} />;
+};
 
 export const productFilters = [
   <SearchInput source="q" alwaysOn />,
@@ -69,7 +69,7 @@ export const productFilters = [
     source="stock_lte"
     defaultValue={10}
   />
-]
+];
 
 const ListActions = ({ isSmall }: any) => (
   <TopToolbar sx={{ minHeight: { sm: 56 } }}>
@@ -78,6 +78,6 @@ const ListActions = ({ isSmall }: any) => (
     <CreateButton />
     <ExportButton />
   </TopToolbar>
-)
+);
 
-export default SubredditList
+export default SubredditList;

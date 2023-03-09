@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { AppBar, UserMenu } from 'react-admin'
-import { Link } from 'react-router-dom'
+import * as React from 'react';
+import { AppBar, UserMenu } from 'react-admin';
+import { Link } from 'react-router-dom';
 import {
   Box,
   MenuItem,
@@ -9,8 +9,8 @@ import {
   Typography,
   useMediaQuery,
   Theme
-} from '@mui/material'
-import SettingsIcon from '@mui/icons-material/Settings'
+} from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 // import Logo from './Logo';
 
@@ -28,18 +28,18 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
       </ListItemIcon>
       <ListItemText>Configuration</ListItemText>
     </MenuItem>
-  )
-})
+  );
+});
 const CustomUserMenu = () => (
   <UserMenu>
     <ConfigurationMenu />
   </UserMenu>
-)
+);
 
 const CustomAppBar = (props: any) => {
   const isLargeEnough = useMediaQuery<Theme>((theme) =>
     theme.breakpoints.up('sm')
-  )
+  );
   return (
     <AppBar
       {...props}
@@ -61,7 +61,7 @@ const CustomAppBar = (props: any) => {
       {/* {isLargeEnough && <Logo />} */}
       {isLargeEnough && <Box component="span" sx={{ flex: 1 }} />}
     </AppBar>
-  )
-}
+  );
+};
 
-export default CustomAppBar
+export default CustomAppBar;

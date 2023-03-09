@@ -1,14 +1,14 @@
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import Box from '@mui/material/Box'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
-import { useTheme, Title } from 'react-admin'
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import { useTheme, Title } from 'react-admin';
 
-import { darkTheme, lightTheme } from '../../layout/themes'
+import { darkTheme, lightTheme } from '../../layout/themes';
 
 const Configuration = () => {
-  const [theme, setTheme] = useTheme()
+  const [theme, setTheme] = useTheme();
 
   return (
     <Card>
@@ -33,7 +33,7 @@ const Configuration = () => {
         </Button>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default Configuration
+export default Configuration;

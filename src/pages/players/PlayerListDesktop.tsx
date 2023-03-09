@@ -1,19 +1,19 @@
-import * as React from 'react'
+import * as React from 'react';
 import {
   Identifier,
   Datagrid,
   DateField,
   TextField,
   BooleanField
-} from 'react-admin'
+} from 'react-admin';
 
 // import ProductReferenceField from '../products/ProductReferenceField';
 // import CustomerReferenceField from '../visitors/CustomerReferenceField';
-import rowStyle from './rowStyle'
+import rowStyle from './rowStyle';
 // import UsernameField from '../../components/UsernameField';
 
 export interface PlayerListDesktopProps {
-  selectedRow?: Identifier
+  selectedRow?: Identifier;
 }
 
 const PlayerListDesktop = ({ selectedRow }: PlayerListDesktopProps) => (
@@ -46,6 +46,6 @@ const PlayerListDesktop = ({ selectedRow }: PlayerListDesktopProps) => (
     <BooleanField source="is_banned" />
     <DateField source="tag_time" />
   </Datagrid>
-)
+);
 
-export default PlayerListDesktop
+export default PlayerListDesktop;

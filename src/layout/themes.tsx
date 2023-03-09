@@ -1,4 +1,4 @@
-import { defaultTheme } from 'react-admin'
+import { defaultTheme } from 'react-admin';
 
 export const darkTheme = {
   palette: {
@@ -34,7 +34,7 @@ export const darkTheme = {
       }
     }
   }
-}
+};
 
 export const lightTheme = {
   palette: {
@@ -100,4 +100,4 @@ export const lightTheme = {
       }
     }
   }
-}
+};
