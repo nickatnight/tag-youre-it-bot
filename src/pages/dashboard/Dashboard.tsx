@@ -7,6 +7,7 @@ import Welcome from './Welcome';
 
 import { Player } from '../../types';
 
+
 const styles = {
   flex: { display: 'flex' },
   flexColumn: { display: 'flex', flexDirection: 'column' },
