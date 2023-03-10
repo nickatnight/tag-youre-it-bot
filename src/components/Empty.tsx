@@ -5,7 +5,7 @@ interface Props {
   title: string;
 }
 
-const Empty = (props: Props) => {
+const Empty = (props: Props): JSX.Element => {
   const { title } = props;
   return (
     <Box textAlign="center" m={1}>

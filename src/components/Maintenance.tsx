@@ -7,7 +7,7 @@ const maintenanceStyle = {
   backgroundSize: 'cover'
 };
 
-const Maintenance = () => {
+const Maintenance = (): JSX.Element => {
   return <div style={maintenanceStyle}></div>;
 };
 

@@ -1,4 +1,5 @@
 import { defaultTheme } from 'react-admin';
+import { ThemeOptions } from '@mui/material/styles';
 
 export const darkTheme = {
   palette: {
@@ -100,4 +101,16 @@ export const lightTheme = {
       }
     }
   }
+};
+
+export const themeOptions: ThemeOptions = {
+  palette: {
+    mode: 'light',
+    primary: {
+      main: 'rgba(168,0,0,0.77)',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+  },
 };

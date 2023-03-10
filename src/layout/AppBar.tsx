@@ -8,7 +8,7 @@ import {
   ListItemText,
   Typography,
   useMediaQuery,
-  Theme
+  type Theme
 } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
@@ -18,7 +18,7 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
   return (
     <MenuItem
       component={Link}
-      // @ts-ignore
+      // @ts-expect-error  ref is not overloaded
       ref={ref}
       {...props}
       to="/configuration"
@@ -30,13 +30,13 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
     </MenuItem>
   );
 });
-const CustomUserMenu = () => (
+const CustomUserMenu = (): JSX.Element => (
   <UserMenu>
     <ConfigurationMenu />
   </UserMenu>
 );
 
-const CustomAppBar = (props: any) => {
+const CustomAppBar = (props: any): JSX.Element => {
   const isLargeEnough = useMediaQuery<Theme>((theme) =>
     theme.breakpoints.up('sm')
   );

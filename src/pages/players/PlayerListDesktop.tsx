@@ -43,8 +43,8 @@ const PlayerListDesktop = ({ selectedRow }: PlayerListDesktopProps) => (
     <BooleanField source="is_employee" />
     <BooleanField source="verified" />
     <BooleanField source="opted_out" />
-    <BooleanField source="is_banned" />
-    <DateField source="tag_time" />
+    <DateField source="tag_time" showTime />
+    <BooleanField source="is_it" />
   </Datagrid>
 );
 

@@ -1,25 +1,22 @@
 import * as React from 'react';
-import { FC, createElement } from 'react';
 import { Card, Box, Typography, Divider } from '@mui/material';
-import { Link, To } from 'react-router-dom';
-import { ReactNode } from 'react';
+import { Link, type To } from 'react-router-dom';
 
 import cartouche from '../assets/img/cartouche.png';
 import cartoucheDark from '../assets/img/cartoucheDark.png';
 
 interface Props {
-  icon: FC<any>;
+  icon: React.FC<any>;
   to: To;
   title?: string;
   subtitle?: string | number;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
-const CardWithIcon = (props: Props) => {
+const CardWithIcon = (props: Props): JSX.Element => {
   const { icon, title, subtitle, to, children } = props;
 
   return (
-    // @ts-ignore
     <Card
       sx={{
         minHeight: 52,
@@ -51,12 +48,12 @@ const CardWithIcon = (props: Props) => {
           }}
         >
           <Box width="3em" className="icon">
-            {createElement(icon, { fontSize: 'large' })}
+            {React.createElement(icon, { fontSize: 'large' })}
           </Box>
           <Box textAlign="right">
             <Typography color="textSecondary">{title}</Typography>
             <Typography variant="h5" component="h2">
-              {subtitle || ' '}
+              {subtitle ?? ' '}
             </Typography>
           </Box>
         </Box>

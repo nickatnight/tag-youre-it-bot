@@ -1,31 +1,25 @@
 import * as React from 'react';
-import { Box, Chip, useMediaQuery, Theme } from '@mui/material';
+import { Box, useMediaQuery, Theme } from '@mui/material';
 import {
-  CreateButton,
   ExportButton,
   FilterButton,
   FilterForm,
   FilterContext,
-  InputProps,
   ListBase,
-  NumberInput,
   Pagination,
-  SearchInput,
   SortButton,
   Title,
   TopToolbar,
-  useTranslate,
   useGetResourceLabel
 } from 'react-admin';
 
 import ImageList from './GridList';
-// import Aside from './Aside';
 
 const SubredditList = () => {
   const getResourceLabel = useGetResourceLabel();
   const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
   return (
-    <ListBase perPage={10} sort={{ field: 'display_name', order: 'asc' }}>
+    <ListBase perPage={12} sort={{ field: 'display_name', order: 'ASC' }}>
       <Title defaultTitle={getResourceLabel('subreddits', 2)} />
       <FilterContext.Provider value={productFilters}>
         <ListActions isSmall={isSmall} />
@@ -46,36 +40,12 @@ const SubredditList = () => {
   );
 };
 
-const QuickFilter = ({ label }: InputProps) => {
-  const translate = useTranslate();
-  return <Chip sx={{ mb: 1 }} label={translate(label as string)} />;
-};
-
-export const productFilters = [
-  <SearchInput source="q" alwaysOn />,
-  // <ReferenceInput
-  //     source="category_id"
-  //     reference="categories"
-  //     sort={{ field: 'id', order: 'ASC' }}
-  // >
-  //     <SelectInput source="name" />
-  // </ReferenceInput>,
-  <NumberInput source="width_gte" />,
-  <NumberInput source="width_lte" />,
-  <NumberInput source="height_gte" />,
-  <NumberInput source="height_lte" />,
-  <QuickFilter
-    label="resources.products.fields.stock_lte"
-    source="stock_lte"
-    defaultValue={10}
-  />
-];
+export const productFilters = [];
 
 const ListActions = ({ isSmall }: any) => (
   <TopToolbar sx={{ minHeight: { sm: 56 } }}>
     {isSmall && <FilterButton />}
-    <SortButton fields={['reference', 'sales', 'stock']} />
-    <CreateButton />
+    <SortButton fields={['display_name', 'subscribers']} />
     <ExportButton />
   </TopToolbar>
 );

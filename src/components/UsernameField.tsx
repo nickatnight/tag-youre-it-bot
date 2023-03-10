@@ -1,17 +1,17 @@
 import * as React from 'react';
-import { SxProps, Typography } from '@mui/material';
+import { type SxProps, Typography } from '@mui/material';
 import { memo } from 'react';
 
-import { FieldProps, useRecordContext } from 'react-admin';
+import { type FieldProps, useRecordContext } from 'react-admin';
 import AvatarField from './AvatarField';
-import { Player } from '../types';
+import { type Player } from '../types';
 
 interface Props extends FieldProps<Player> {
   size?: string;
   sx?: SxProps;
 }
 
-const UsernameField = (props: Props) => {
+const UsernameField = (props: Props): JSX.Element | null => {
   const { size } = props;
   const record = useRecordContext<Player>();
   return record ? (

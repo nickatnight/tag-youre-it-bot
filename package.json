@@ -1,7 +1,7 @@
 {
   "name": "tag-youre-it-bot",
   "version": "0.1.0",
-  "homepage": "https://www.tagyoureitbot.com",
+  "homepage": "https://tagyoureitbot.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,7 +17,6 @@
     "react-admin": "^4.5.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -27,9 +26,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "format": "prettier --write './**/*.{ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [
@@ -51,9 +49,18 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^4.0.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
   },
   "proxy": "http://localhost:8666",
   "jest": {
