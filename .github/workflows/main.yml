@@ -1,10 +1,10 @@
-name: Build and Test React Application
+name: Build Lint and Test React Application
 
 on:
   push:
     branches: [ develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 jobs:
   build-and-test:
@@ -22,8 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm ci, build and test
+      - name: npm ci, lint, test, build
         run: |
           npm ci
+          npm run format:check
+          npm run test
           npm run build --if-present
-          npm test
