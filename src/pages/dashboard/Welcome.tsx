@@ -44,7 +44,7 @@ const Welcome = () => {
                         <Button
                             target="_blank"
                             variant="contained"
-                            href="https://api-staging.tagyoureitbot.com/docs"
+                            href="https://api.tagyoureitbot.com/docs"
                             startIcon={<HomeIcon />}
                         >
                             TagYoureItBot Api

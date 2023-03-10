@@ -4,7 +4,7 @@ export const getApiUrl = (): string => {
 
     switch(process.env.NODE_ENV) {
         case 'production':
-            BASE_URL = 'https://api-staging.tagyoureitbot.com/v1';
+            BASE_URL = 'https://api.tagyoureitbot.com/v1';
             break
     }
 
