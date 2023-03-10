@@ -1,19 +1,12 @@
 import * as React from 'react';
-import {
-    AutocompleteInput,
-    DateInput,
-    ReferenceInput,
-    SearchInput,
-    SelectInput,
-    BooleanInput,
-} from 'react-admin';
+import { SearchInput, BooleanInput } from 'react-admin';
 
 const playerFilters = [
-    <SearchInput source="q" alwaysOn />,
-    <BooleanInput source="is_banned" />,
-    <BooleanInput source="opted_out" />,
-    <BooleanInput source="verified" />,
-    <BooleanInput source="is_employee" />,
+  <SearchInput key="search" source="q" alwaysOn />,
+  <BooleanInput key="is_banned" source="is_banned" />,
+  <BooleanInput key="opted_out" source="opted_out" />,
+  <BooleanInput key="verified" source="verified" />,
+  <BooleanInput key="is_employee" source="is_employee" />
 ];
 
 export default playerFilters;
