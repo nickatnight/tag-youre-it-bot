@@ -10,7 +10,7 @@ export interface Game extends RaRecord {
 
 export interface Subreddit extends RaRecord {
   ref_id: string;
-  created_utc: Date;
+  created_at: Date;
   display_name: string;
   description: string;
   over18: boolean;
@@ -20,7 +20,7 @@ export interface Subreddit extends RaRecord {
 
 export interface Player extends RaRecord {
   ref_id: string;
-  created_utc: Date;
+  created_at: Date;
   username: string;
   is_employee: boolean;
   verified: boolean;
@@ -28,6 +28,7 @@ export interface Player extends RaRecord {
   is_banned: boolean;
   tag_time: Date;
   icon_img: string;
+  is_it: boolean;
 }
 
 declare global {
