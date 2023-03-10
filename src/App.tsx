@@ -4,7 +4,7 @@ import { Route } from 'react-router';
 
 import { Dashboard } from './pages/dashboard';
 import { Layout } from './layout';
-import { lightTheme, themeOptions } from './layout/themes';
+import { lightTheme } from './layout/themes';
 import Configuration from './pages/configuration/Configuration';
 import restProvider from './dataProviders/restProvider';
 import Maintenance from './components/Maintenance';
@@ -26,7 +26,7 @@ const App = () => (
         dashboard={Dashboard}
         layout={Layout}
         disableTelemetry
-        theme={themeOptions}
+        theme={lightTheme}
       >
         <CustomRoutes>
           <Route path="/configuration" element={<Configuration />} />

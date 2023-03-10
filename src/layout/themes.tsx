@@ -1,6 +1,6 @@
 import { defaultTheme } from 'react-admin';
-import { ThemeOptions } from '@mui/material/styles';
 
+/* eslint-disable @typescript-eslint/prefer-as-const */
 export const darkTheme = {
   palette: {
     primary: {
@@ -101,16 +101,4 @@ export const lightTheme = {
       }
     }
   }
-};
-
-export const themeOptions: ThemeOptions = {
-  palette: {
-    mode: 'light',
-    primary: {
-      main: 'rgba(168,0,0,0.77)',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-  },
 };

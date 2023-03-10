@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-
 import { fetchUtils } from 'react-admin';
 import { stringify } from 'query-string';
 

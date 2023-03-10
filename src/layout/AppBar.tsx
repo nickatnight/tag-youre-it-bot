@@ -13,7 +13,7 @@ import {
 import SettingsIcon from '@mui/icons-material/Settings';
 
 // import Logo from './Logo';
-
+/* eslint-disable react/display-name */
 const ConfigurationMenu = React.forwardRef((props, ref) => {
   return (
     <MenuItem
